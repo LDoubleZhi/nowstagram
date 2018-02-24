@@ -5,7 +5,7 @@ from models import Image, User, Comment
 from flask import render_template, redirect, request, flash, get_flashed_messages,send_from_directory
 import random, hashlib,json, uuid, os
 from flask_login import login_user, logout_user, current_user, login_required
-
+from qiniusdk import qiniu_upload_file
 @app.route('/index/images/<int:page>/<int:per_page>/')
 def index_images(page, per_page):
     paginate = Image.query.order_by(db.desc(Image.id)).paginate(page=page, per_page=per_page, error_out=False)
@@ -155,7 +155,9 @@ def upload():
         if file_ext in app.config['ALLOWED_EXT']:
             file_name = str(uuid.uuid1()).replace('-','')+'.'+file_ext
             #不用用户的图片名字，自己用uuid来产生一个新的名字
-            url = save_to_local(file, file_name)
+            #url = save_to_local(file, file_name)
+            #使用qiniu
+            url = qiniu_upload_file(file, file_name)
             if url != None:
                 db.session.add(Image(url, current_user.id))
                 db.session.commit()
