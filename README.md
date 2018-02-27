@@ -25,33 +25,25 @@
 
 ### 二.主要使用的包及ide  
 
-#### 1.开发工具Git，PyCharm
+1.开发工具Git，PyCharm
 
-#### 2. Flask，Flask-Script
+2.Flask，Flask-Script
 
-#### 3. Flask-SQLAlchemy
+3.Flask-SQLAlchemy
 
-#### 4. Flask-Login
+4.Flask-Login
 
-#### 5. 云存储（qiniu云sdk）
+5.云存储（qiniu云sdk）
 
-####数据库：Flask-SQLAlchemy （特点:ORM  提高开发效率）
+数据库：Flask-SQLAlchemy（特点:ORM  提高开发效率）
+MVC（开发模式）前后端分离，模板（提高复用性）
+云SDK接入（快速学习）
+AJAX（为了产品体验更好，了解json格式）
+Flask框架（它把request,response独立出来）
+Git工具（版本控制）  
 
-####MVC（开发模式）前后端分离，模板（提高复用性）
-
-####云SDK接入（快速学习）
-
-####AJAX（为了产品体验更好，了解json格式）
-
-####Flask框架（它把request,response独立出来）
-
-####Git工具（版本控制）  
-
-
-### 三.未来希望加入的功能
-####1. 用户注册，邮箱激活流程
-
-####2. 首页滚动到底部自动加载更多
-
-####3. 管理员后台删图
+###   三.未来希望加入的功能
+1.用户注册，邮箱激活流程
+2.首页滚动到底部自动加载更多
+3.管理员后台删图
 
